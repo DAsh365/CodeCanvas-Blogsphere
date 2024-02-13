@@ -1,0 +1,69 @@
+{{!-- Login Template --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - CodeCanvas Blogsphere</title>
+  <link rel="stylesheet" href="../public/css/reset.css">
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Login to Your Account</h1>
+  </header>
+
+  <main>
+    <form id="loginForm" action="/api/users/login" method="POST">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 CodeCanvas Blogsphere</p>
+  </footer>
+
+  <script src="../public/js/script.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const userData = {
+        username: document.getElementById('username').value.trim(),
+        password: document.getElementById('password').value.trim(),
+      };
+      
+      fetch('/api/users/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.loggedIn) {
+          window.location.replace('/dashboard');
+        } else {
+          alert('Failed to log in');
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</body>
+</html>
