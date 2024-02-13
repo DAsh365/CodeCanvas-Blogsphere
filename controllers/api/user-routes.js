@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// Get all comments
 router.get('/', async (req, res) => {
   try {
     const commentData = await Comment.findAll();
@@ -12,14 +11,12 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Post a new comment
 router.post('/', withAuth, async (req, res) => {
   try {
-    // Only logged-in users should be able to post comments
     if (req.session.userId) {
       const newComment = await Comment.create({
         ...req.body,
-        userId: req.session.userId, // Assuming your Comment model has a userId field
+        userId: req.session.userId,
       });
       res.status(200).json(newComment);
     } else {
@@ -30,14 +27,12 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-// Delete a comment
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    // Only logged-in users should be able to delete their comments
     const commentData = await Comment.destroy({
       where: {
         id: req.params.id,
-        userId: req.session.userId, // This ensures that users can only delete their own comments
+        userId: req.session.userId,
       },
     });
 

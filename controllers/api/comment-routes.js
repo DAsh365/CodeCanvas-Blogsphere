@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// Route to get all comments
 router.get('/', async (req, res) => {
   try {
     const commentData = await Comment.findAll();
@@ -12,7 +11,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Route to create a new comment
 router.post('/', withAuth, async (req, res) => {
   if (req.session) {
     try {
@@ -27,13 +25,12 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-// Route to delete a comment
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const commentData = await Comment.destroy({
       where: {
         id: req.params.id,
-        userId: req.session.userId, // This ensures users can only delete their own comments
+        userId: req.session.userId,
       },
     });
 

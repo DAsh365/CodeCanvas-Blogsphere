@@ -1,4 +1,3 @@
-// Handling form submission for signup
 document.querySelector('.signup-form').addEventListener('submit', async (event) => {
     event.preventDefault();
     
@@ -23,10 +22,9 @@ document.querySelector('.signup-form').addEventListener('submit', async (event) 
         alert('An error occurred. Please try again later.');
       }
     }
-  });
-  
-  // Handling form submission for login
-  document.querySelector('.login-form').addEventListener('submit', async (event) => {
+});
+
+document.querySelector('.login-form').addEventListener('submit', async (event) => {
     event.preventDefault();
     
     const username = document.querySelector('#username-login').value.trim();
@@ -50,5 +48,4 @@ document.querySelector('.signup-form').addEventListener('submit', async (event) 
         alert('An error occurred. Please try again later.');
       }
     }
-  });
-  
+});

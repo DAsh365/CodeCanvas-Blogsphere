@@ -5,7 +5,6 @@ class Comment extends Model {}
 
 Comment.init(
   {
-    // Define columns
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -20,7 +19,7 @@ Comment.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'user', // This is a reference to the table name, ensure it matches your User model definition
+        model: 'user',
         key: 'id',
       },
     },
@@ -28,17 +27,17 @@ Comment.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'post', // This is a reference to the table name, ensure it matches your Post model definition
+        model: 'post',
         key: 'id',
       },
     }
   },
   {
     sequelize,
-    timestamps: true, // Enable timestamps
-    freezeTableName: true, // Prevent sequelize from renaming the table
-    underscored: true, // Use underscores instead of camel-casing (i.e. `comment_text` and not `commentText`)
-    modelName: 'comment', // This is the name of the table this model refers to
+    timestamps: true,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'comment',
   }
 );
 

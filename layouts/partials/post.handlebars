@@ -1,4 +1,3 @@
-<!-- Post -->
 <article class="post">
   <h2 class="post-title">{{title}}</h2>
   <p class="post-content">{{content}}</p>
@@ -6,7 +5,6 @@
   <p class="post-author">by {{User.username}}</p>
 </article>
 
-<!-- Comments Section -->
 <section class="comments">
   <h3>Comments</h3>
   {{#if comments.length}}
@@ -23,7 +21,6 @@
   {{/if}}
 
   {{#if loggedIn}}
-    <!-- New Comment Form -->
     <form class="new-comment-form" action="/api/comments" method="POST">
       <input type="hidden" name="postId" value="{{id}}">
       <textarea name="content" placeholder="Leave a comment" required></textarea>

@@ -1,9 +1,7 @@
--- Use your database or create it if it does not exist
 DROP DATABASE IF EXISTS blog_site_db;
 CREATE DATABASE blog_site_db;
 USE blog_site_db;
 
--- Create a Users table
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
@@ -12,7 +10,6 @@ CREATE TABLE users (
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Create a Posts table
 CREATE TABLE posts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -23,7 +20,6 @@ CREATE TABLE posts (
     FOREIGN KEY (userId) REFERENCES users(id)
 );
 
--- Create a Comments table
 CREATE TABLE comments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     content TEXT NOT NULL,

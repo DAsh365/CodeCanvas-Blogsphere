@@ -5,7 +5,6 @@ class Post extends Model {}
 
 Post.init(
   {
-    // Define columns
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -23,17 +22,17 @@ Post.init(
     userId: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user', // This should match the table name for your User model
+        model: 'user',
         key: 'id',
       },
     }
   },
   {
     sequelize,
-    timestamps: true, // Enable timestamps
-    freezeTableName: true, // Prevent Sequelize from renaming the table
-    underscored: true, // Use underscores instead of camel-casing
-    modelName: 'post', // This is the name of the table this model refers to
+    timestamps: true,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'post',
   }
 );
 
