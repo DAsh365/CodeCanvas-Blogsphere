@@ -12,7 +12,7 @@ CodeCanvas Blogsphere is a blogging platform built for developers to share their
 
 ## Usage
 
-To get started with CodeCanvas Blogsphere, simply visit the deployed application at [URL_HERE] and sign up for an account. Once you're signed in, you can start creating your own blog posts, commenting on existing posts, and engaging with the community.
+To get started with CodeCanvas Blogsphere, simply visit the deployed application at [CodeCanvas Blogsphere](https://codecanvas-blogsphere-054fc7745d56.herokuapp.com) and sign up for an account. Once you're signed in, you can start creating your own blog posts, commenting on existing posts, and engaging with the community.
 
 ## Contributing
 
