@@ -1,0 +1,22 @@
+[
+  {
+    "title": "The Power of JavaScript Frameworks",
+    "content": "JavaScript frameworks like React and Vue.js have revolutionized web development, providing efficient solutions for building interactive and dynamic user interfaces. In this blog post, we explore the benefits and advantages of using JavaScript frameworks in modern web development.",
+    "created_by": 1
+  },
+  {
+    "title": "Mastering CSS Flexbox Layout",
+    "content": "CSS Flexbox is a powerful layout model that allows developers to create complex and responsive layouts with ease. In this blog post, we dive deep into the world of CSS Flexbox, exploring its various features and demonstrating how to leverage them effectively in your web projects.",
+    "created_by": 2
+  },
+  {
+    "title": "Getting Started with Node.js",
+    "content": "Node.js is a powerful runtime environment for building server-side applications using JavaScript. In this blog post, we provide a comprehensive guide to getting started with Node.js, covering installation, basic concepts, and practical examples to kickstart your journey into Node.js development.",
+    "created_by": 3
+  },
+  {
+    "title": "The Art of Debugging",
+    "content": "Debugging is an essential skill for every developer, allowing them to identify and fix issues in their code effectively. In this blog post, we delve into the art of debugging, sharing tips, techniques, and best practices to help you become a proficient debugger and streamline your development process.",
+    "created_by": 4
+  }
+]

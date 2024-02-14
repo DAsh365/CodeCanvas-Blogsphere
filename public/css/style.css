@@ -1,117 +1,28 @@
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-ol {
-    margin: 0;
-    padding: 0;
+.boxbg {
+    background-color: cadetblue;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+.text-purple {
+    color: black ;
 }
 
-header,
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
+.full-background {
+    background-color: skyblue;
 }
 
-nav {
-    background: #333;
-    padding: 0.5em 0;
+.rounded-corners {
+    border-radius: 40px;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 1em;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
+#eventModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: skyblue;
     padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.post {
-    margin-bottom: 2em;
-}
-
-.post-title {
-    color: #333;
-    font-size: 24px;
-}
-
-.post-content {
-    color: #666;
-}
-
-.post-date, 
-.post-author {
-    font-size: 0.9em;
-    color: #999;
-}
-
-.comments {
-    margin-top: 2em;
-    font-size: 0.9em;
-}
-
-.comment {
-    margin-bottom: 1em;
-    padding-bottom: 1em;
-    border-bottom: 1px solid #eee;
-}
-
-.comment-author {
-    font-weight: bold;
-}
-
-.new-comment-form textarea, 
-.new-comment-form button {
-    width: 100%;
-    margin-top: 1em;
-}
-
-.new-comment-form button {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.new-comment-form button:hover {
-    background-color: #555;
-}
-
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5em 0;
-    }
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }

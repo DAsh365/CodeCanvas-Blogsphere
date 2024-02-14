@@ -1,32 +1,31 @@
 {
-    "name": "codecanvas-blogsphere",
-    "version": "1.0.0",
-    "description": "A blogging platform for developers.",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js",
-        "dev": "nodemon server.js"
-    },
-    "keywords": [
-        "blog",
-        "platform",
-        "express",
-        "sequelize"
-    ],
-    "author": "Devan Ash",
-    "license": "MIT",
-    "dependencies": {
-        "bcrypt": "^5.1.1",
-        "connect-session-sequelize": "^7.1.7",
-        "dotenv": "^16.4.4",
-        "express": "^4.18.2",
-        "express-handlebars": "^7.1.2",
-        "express-session": "^1.18.0",
-        "mysql2": "^3.9.1",
-        "sequelize": "^6.37.0"
-    },
-    "devDependencies": {
-        "nodemon": "^3.0.3"
-    }
+  "name": "codecanvas-blogsphere",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seeds/seed.js",
+    "start": "nodemon ./server.js"
+  },
+  "keywords": [],
+  "author": "Devan Ash",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "express-validator": "^7.0.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^3.0.2",
+    "sequelize": "^6.3.5",
+    "sib-api-v3-sdk": "^7.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.6"
+  }
 }
