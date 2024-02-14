@@ -18,13 +18,13 @@ router.get("/:id", async (req, res) => {
 router.post("/:id", async (req, res) => {
   try {
     if (!req.session.logged_in) {
-      res.status(401).json({ message: "Unauthorized: User not logged in" });
+      res.status(401).json({ message: "Unauthorized: User is not logged in" });
       return;
     }
     const userId = req.session.user_id;
     const user = await User.findByPk(userId);
     if (!user) {
-      res.status(404).json({ message: "User not found" });
+      res.status(404).json({ message: "User is not found" });
     }
     const commentData = await Comment.create({
       content: req.body.content,

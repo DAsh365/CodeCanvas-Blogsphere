@@ -19,7 +19,7 @@ router.get("/user-posts", async (req, res) => {
       },
     });
     if (!userPost || userPost.lenght === 0) {
-      res.status(404).json({ message: "No Posts  Are Found" });
+      res.status(404).json({ message: "No Posts Are Found" });
       return;
     }
     res.status(200).json(userPost);
@@ -134,7 +134,3 @@ router.put("/:id", async (req, res) => {
 });
 
 module.exports = router;
-
-
-
-
